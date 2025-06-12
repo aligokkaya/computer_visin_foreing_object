@@ -60,7 +60,7 @@ python 02_object_tracking/centroid_tracking_demo.py
 ---
 #### Output
 ---
-![Initial Detection Demo](01_initial_detection/detection_demo.gif)
+![Initial Detection Demo](02_object_tracking/tracking_demo.gif)
 
 
 ### 03\_autoencoder\_module
