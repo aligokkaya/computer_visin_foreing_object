@@ -7,7 +7,7 @@ import os
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tracker import CentroidTracker
-
+ 
 # Ayarlar
 model = load_model("models/autoencoder_320_best_v2.h5")
 IMG_SIZE = 320
