@@ -1,5 +1,0 @@
-scipy
-imutils
-scikit-learn
-scikit-image
-ultralytics
