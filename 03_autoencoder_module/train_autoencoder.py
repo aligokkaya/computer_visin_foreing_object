@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 import cv2
 
 # Veri klasörü
-crop_dir = "/Users/aligokkaya/Desktop/CV_task/dataset/train/clean_crops_320"
+crop_dir = "dataset/train/clean_crops_320"
 X = []
 
 # Veriyi yükle

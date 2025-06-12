@@ -1,16 +1,18 @@
 import cv2
 import numpy as np
 from tensorflow.keras.models import load_model
-from tracker import CentroidTracker
 from collections import defaultdict
 from skimage.metrics import structural_similarity as ssim
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from tracker import CentroidTracker
 
 # Ayarlar
 model = load_model("models/autoencoder_320_best_v2.h5")
 IMG_SIZE = 320
-VIDEO_PATH = "test1.avi"
-OUTPUT_PATH = "output/final_output.avi"
+VIDEO_PATH = "/Users/aligokkaya/Desktop/CV_task/computer_visin_foreing_object/test1.avi"
+OUTPUT_PATH = "output/final_output.mp4"
 SSIM_THRESHOLD = 0.85
 ANOMALY_HISTORY_FRAMES = 6
 ANOMALY_CONFIRM_COUNT = 3

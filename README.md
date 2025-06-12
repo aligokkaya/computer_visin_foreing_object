@@ -106,6 +106,11 @@ python 03_autoencoder_module/generate_centered_crops.py
 
 ---
 
+
+#### Output
+---
+![Initial Detection Demo](03_autoencoder_module/detection_demo.gif)
+
 ### 04\_yolo\_inference\_pipeline
 
 > Applies YOLOv8 model only to anomalous crops.
