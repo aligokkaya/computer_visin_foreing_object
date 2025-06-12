@@ -32,6 +32,7 @@ python 01_initial_detection/background_subtraction_demo.py
 
 > Input video path is hardcoded as `"test1.avi"` inside the script. You can change it as needed.
 
+#### Output
 ---
 ![Initial Detection Demo](01_initial_detection/detection_demo.gif)
 
@@ -57,6 +58,10 @@ python 02_object_tracking/centroid_tracking_demo.py
 ```
 
 ---
+#### Output
+---
+![Initial Detection Demo](01_initial_detection/detection_demo.gif)
+
 
 ### 03\_autoencoder\_module
 
