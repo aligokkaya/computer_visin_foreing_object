@@ -36,6 +36,7 @@ python 01_initial_detection/background_subtraction_demo.py
 
 ---
 
+![Initial Detection Demo](01_initial_detection/detection_demo.gif)
 
 
 ---
@@ -64,7 +65,7 @@ python 02_object_tracking/centroid_tracking_demo.py
 
 ---
 
-
+![Initial Detection Demo](02_object_tracking/tracking_demo.gif)
 
 ---
 
@@ -113,7 +114,7 @@ python 03_autoencoder_module/generate_centered_crops.py
 
 ---
 
-
+![Initial Detection Demo](03_autoencoder_module/detection_demo.gif)
 
 ---
 
@@ -132,7 +133,7 @@ python 03_autoencoder_module/generate_centered_crops.py
 #### 📋 Workflow
 
 1. Run `extract_anomaly_crops.py` to save only the anomalous crops detected by the autoencoder.
-2. Upload these crops to [Roboflow](https://roboflow.com/) and label them (e.g., Bottle, Cap, Bubble, etc.).
+2. Upload these crops to [Roboflow](https://app.roboflow.com/ds/F4yO3Sq95r?key=i0ZGPWv2cx) and label them (e.g., Bottle, Cap, Bubble, etc.).
 3. Export the labeled dataset in YOLOv8 format.
 4. Train the YOLOv8 model using `YOLOv8_Tutorial.ipynb`. This notebook includes:
    - Loading Roboflow dataset
@@ -184,7 +185,7 @@ python 05_final_pipeline_and_logging/final_pipeline_inference.py
 
 ---
 
-
+![Initial Detection Demo](05_final_pipeline_and_logging/detection_demo.gif)
 
 ---
 
