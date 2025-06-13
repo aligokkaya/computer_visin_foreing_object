@@ -183,7 +183,7 @@ python 05_final_pipeline_and_logging/final_pipeline_inference.py
 
 #### Output
 ---
-![Initial Detection Demo](03_autoencoder_module/detection_demo.gif)
+![Initial Detection Demo](05_final_pipeline_and_logging/detection_demo.gif)
 
 ## 🙋 Contact
 
