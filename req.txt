@@ -3,3 +3,4 @@ imutils
 scikit-learn
 scikit-image
 ultralytics
+opencv-python
