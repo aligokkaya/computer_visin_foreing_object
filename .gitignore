@@ -1,0 +1,17 @@
+# Media files
+*.avi
+*.mp4
+*.mov
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Archives
+#*.zip
