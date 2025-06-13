@@ -15,17 +15,12 @@ from ultralytics import YOLO
 from datetime import datetime
 
 
-model = load_model("/Users/aligokkaya/Desktop/CV_task/3/models/autoencoder_320_best_v2.h5")
-yolo_model = YOLO("/Users/aligokkaya/Desktop/CV_task/4/content/runs/detect/train/weights/best.pt")  # YOLOv8 modelini buraya koy
+model = load_model("../03_autoencoder_module/models/autoencoder_320_best_v2.h5")
+yolo_model = YOLO("content/runs/detect/train/weights/best.pt")  # YOLOv8 modelini buraya koy
 
 IMG_SIZE = 320
-VIDEO_PATH = "/Users/aligokkaya/Desktop/CV_task/test1.avi"
-OUTPUT_PATH = "output/final_output.avi"
-
-
-# Ayarlar
-IMG_SIZE = 320
-OUTPUT_VIDEO_PATH = "output/final_output.avi"
+VIDEO_PATH = "../test1.avi"
+OUTPUT_PATH = "output/final_output.mp4"
 LOG_PATH = "output/anomaly_log.csv"
 SSIM_THRESHOLD = 0.85
 ANOMALY_HISTORY_FRAMES = 6
@@ -41,8 +36,8 @@ cap = cv2.VideoCapture(VIDEO_PATH)
 fps = cap.get(cv2.CAP_PROP_FPS)
 width, height = 640, 360
 fourcc = cv2.VideoWriter_fourcc(*"XVID")
-os.makedirs(os.path.dirname(OUTPUT_VIDEO_PATH), exist_ok=True)
-writer = cv2.VideoWriter(OUTPUT_VIDEO_PATH, fourcc, fps, (width, height))
+os.makedirs(os.path.dirname(OUTPUT_PATH), exist_ok=True)
+writer = cv2.VideoWriter(OUTPUT_PATH, fourcc, fps, (width, height))
 
 # Log CSV başlığı
 with open(LOG_PATH, mode="w", newline="") as file:

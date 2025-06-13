@@ -9,9 +9,9 @@ from collections import defaultdict
 from skimage.metrics import structural_similarity as ssim
 
 
-model = load_model("/models/autoencoder_320_best_v2.h5")
+model = load_model("../03_autoencoder_module/models/autoencoder_320_best_v2.h5")
 IMG_SIZE = 320
-VIDEO_PATH = "/Users/aligokkaya/Desktop/CV_task/test1.avi"
+VIDEO_PATH = "../test1.avi"
 OUTPUT_PATH = "output/final_output.mp4"
 SSIM_THRESHOLD = 0.85
 ANOMALY_HISTORY_FRAMES = 6

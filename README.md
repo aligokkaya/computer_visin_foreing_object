@@ -180,6 +180,11 @@ python 05_final_pipeline_and_logging/final_pipeline_inference.py
 
 ---
 
+
+#### Output
+---
+![Initial Detection Demo](03_autoencoder_module/detection_demo.gif)
+
 ## 🙋 Contact
 
 Developed by Ali Gökkaya as part of a computer vision job application task.

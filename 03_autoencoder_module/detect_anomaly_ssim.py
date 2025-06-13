@@ -11,7 +11,7 @@ from tracker import CentroidTracker
 # Ayarlar
 model = load_model("models/autoencoder_320_best_v2.h5")
 IMG_SIZE = 320
-VIDEO_PATH = "/Users/aligokkaya/Desktop/CV_task/computer_visin_foreing_object/test1.avi"
+VIDEO_PATH = "../test1.avi"
 OUTPUT_PATH = "output/final_output.mp4"
 SSIM_THRESHOLD = 0.85
 ANOMALY_HISTORY_FRAMES = 6
