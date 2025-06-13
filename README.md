@@ -33,9 +33,12 @@ python 01_initial_detection/background_subtraction_demo.py
 > Input video path is hardcoded as `"test1.avi"` inside the script. You can change it as needed.
 
 #### Output
----
-![Initial Detection Demo](01_initial_detection/detection_demo.gif)
 
+---
+
+
+
+---
 
 ### 02\_object\_tracking
 
@@ -57,11 +60,13 @@ python 01_initial_detection/background_subtraction_demo.py
 python 02_object_tracking/centroid_tracking_demo.py
 ```
 
----
 #### Output
----
-![Initial Detection Demo](02_object_tracking/tracking_demo.gif)
 
+---
+
+
+
+---
 
 ### 03\_autoencoder\_module
 
@@ -104,26 +109,35 @@ python 03_autoencoder_module/generate_crops_from_video.py
 python 03_autoencoder_module/generate_centered_crops.py
 ```
 
----
-
-
 #### Output
+
 ---
-![Initial Detection Demo](03_autoencoder_module/detection_demo.gif)
+
+
+
+---
 
 ### 04\_yolo\_inference\_pipeline
 
 > Applies YOLOv8 model only to anomalous crops.
 
-#### 🧩 YOLO Classification
+#### 🧹 YOLO Classification
 
 **Files:**
 
 - `extract_anomaly_crops.py`: Saves detected anomaly crops for YOLO labeling.
 - `yolo_bottle_model.zip`: Contains trained YOLOv8 weights.
-- `YOLOv8_Tutorial.ipynb`: Trains the YOLOv8 model on labeled anomaly crops.
+- `YOLOv8_Tutorial.ipynb`: Used to train the YOLOv8 model.
 
-Labeling and export were done via [Roboflow](https://roboflow.com/).
+#### 📋 Workflow
+
+1. Run `extract_anomaly_crops.py` to save only the anomalous crops detected by the autoencoder.
+2. Upload these crops to [Roboflow](https://roboflow.com/) and label them (e.g., Bottle, Cap, Bubble, etc.).
+3. Export the labeled dataset in YOLOv8 format.
+4. Train the YOLOv8 model using `YOLOv8_Tutorial.ipynb`. This notebook includes:
+   - Loading Roboflow dataset
+   - Training the model
+   - Saving final weights
 
 #### ▶️ How to Run
 
@@ -131,8 +145,12 @@ Labeling and export were done via [Roboflow](https://roboflow.com/).
 python 04_yolo_inference_pipeline/extract_anomaly_crops.py
 ```
 
-For training:
-Open and run all cells in `YOLOv8_Tutorial.ipynb`
+To train the model:
+
+```bash
+# Open in Jupyter and run all cells
+YOLOv8_Tutorial.ipynb
+```
 
 ---
 
@@ -162,6 +180,12 @@ Open and run all cells in `YOLOv8_Tutorial.ipynb`
 python 05_final_pipeline_and_logging/final_pipeline_inference.py
 ```
 
+#### Output
+
+---
+
+
+
 ---
 
 ## 🎥 Input Video Files
@@ -180,16 +204,7 @@ python 05_final_pipeline_and_logging/final_pipeline_inference.py
 
 ---
 
-
-#### Output
----
-![Initial Detection Demo](05_final_pipeline_and_logging/detection_demo.gif)
-
 ## 🙋 Contact
 
 Developed by Ali Gökkaya as part of a computer vision job application task.
-
----
-
-> "This solution focuses on performance, modularity, and clarity — built to scale and debug easily."
 
