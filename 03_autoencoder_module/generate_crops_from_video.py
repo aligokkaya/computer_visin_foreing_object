@@ -47,4 +47,4 @@ while True:
         crop_count += 1
 
 cap.release()
-print(f"✅ {crop_count} adet 320x320 crop kaydedildi.")
+print(f"{crop_count} adet 320x320 crop kaydedildi.")

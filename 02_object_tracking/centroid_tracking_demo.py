@@ -56,4 +56,3 @@ while True:
 cap.release()
 writer.release()
 cv2.destroyAllWindows()
-print(f"✅ Tracking output video saved to: {output_path}")

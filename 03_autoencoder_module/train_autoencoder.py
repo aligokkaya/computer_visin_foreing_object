@@ -22,10 +22,8 @@ for fname in os.listdir(crop_dir):
 X = np.array(X)
 X = np.expand_dims(X, axis=-1)  # (N, 320, 320, 1)
 
-# Train/Val split
 X_train, X_val = train_test_split(X, test_size=0.1, random_state=42)
 
-# Autoencoder modeli
 input_img = Input(shape=(320, 320, 1))
 
 x = Conv2D(64, (3, 3), activation='relu', padding='same')(input_img)
@@ -46,11 +44,9 @@ decoded = Conv2D(1, (3, 3), activation='sigmoid', padding='same')(x)
 autoencoder = Model(input_img, decoded)
 autoencoder.compile(optimizer='adam', loss='mse')
 
-# Callback'ler
 early_stop = EarlyStopping(monitor="val_loss", patience=5, restore_best_weights=True)
 checkpoint = ModelCheckpoint("models/autoencoder_320_best_v2.h5", monitor="val_loss", save_best_only=True)
 
-# Eğitim
 autoencoder.fit(
     X_train, X_train,
     epochs=20,

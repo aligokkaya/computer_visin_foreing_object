@@ -87,7 +87,7 @@ while True:
         # Anomaliler için YOLO sınıflandırması
         yolo_class = "-"
         if is_anomaly:
-            temp_crop = cv2.resize(crop, (640, 640))  # YOLOv8 input
+            temp_crop = cv2.resize(crop, (640, 640)) 
             results = yolo_model.predict(temp_crop, verbose=False)
             for r in results:
                 for box in r.boxes:
