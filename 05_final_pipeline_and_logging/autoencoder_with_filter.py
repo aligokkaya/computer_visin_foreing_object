@@ -8,9 +8,8 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tracker import CentroidTracker
 
-from tracker import CentroidTracker  # tracker.py ile aynı klasörde olmalı
+from tracker import CentroidTracker  
 
-# === AYARLAR ===
 VIDEO_PATH = "../test1.avi"
 OUTPUT_PATH = "output/final_defect_output.mp4"
 MODEL_PATH = "../03_autoencoder_module/models/autoencoder_320_best_v2.h5"
@@ -19,7 +18,6 @@ SSIM_THRESHOLD = 0.85
 ANOMALY_HISTORY_FRAMES = 6
 ANOMALY_CONFIRM_COUNT = 3
 
-# === YÜKLEME ===
 model = load_model(MODEL_PATH)
 cap = cv2.VideoCapture(VIDEO_PATH)
 fps = cap.get(cv2.CAP_PROP_FPS)
