@@ -1,7 +1,6 @@
 from scipy.spatial import distance as dist
 from collections import OrderedDict
 import numpy as np
-import cv2
 
 class CentroidTracker:
     def __init__(self, max_disappeared=15):
@@ -50,7 +49,6 @@ class CentroidTracker:
             for (row, col) in zip(rows, cols):
                 if row in used_rows or col in used_cols:
                     continue
-
                 object_id = object_ids[row]
                 self.objects[object_id] = input_centroids[col]
                 self.disappeared[object_id] = 0
